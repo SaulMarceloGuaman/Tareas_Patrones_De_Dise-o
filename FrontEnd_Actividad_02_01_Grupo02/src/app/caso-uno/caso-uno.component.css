@@ -1,0 +1,77 @@
+/* Estilos generales */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos para el formulario */
+.form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form input,
+.form select,
+.form button {
+  width: calc(33.33% - 10px);
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form select {
+  width: 100%;
+}
+
+.form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Estilos para los encabezados de la tabla */
+table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Estilos para filas impares de la tabla */
+table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Estilos para los encabezados de los datos del árbol */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

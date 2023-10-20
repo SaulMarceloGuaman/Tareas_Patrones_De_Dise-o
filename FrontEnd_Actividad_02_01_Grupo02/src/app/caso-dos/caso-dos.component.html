@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="form">
+    <form (ngSubmit)="ok()">
+      <div class="form-group">
+        <label for="temperatura">Temperatura</label>
+        <input type="number" id="temperatura" placeholder="Temperatura" [(ngModel)]="temperatura" name="temperatura" required>
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <select id="tipo" [(ngModel)]="tipo" name="tipo">
+          <option [value]="tipo.value" *ngFor="let tipo of tiposTemperatura">{{tipo.viewValue}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="piso">Piso</label>
+        <input type="number" id="piso" placeholder="Piso" [(ngModel)]="piso" name="piso">
+      </div>
+      <div class="form-group">
+        <label for="edificio">Edificio</label>
+        <input type="text" id="edificio" placeholder="Edificio" [(ngModel)]="edificio" name="edificio">
+      </div>
+      <button class="btn-primary" style="width: 100%;" type="submit">Aceptar</button>
+    </form>
+  </div>
+  <hr>
+  <div>
+      <button (click)="recargar()">Recargar</button>
+      <hr>
+      <div>
+          <table>
+              <thead>
+                  <tr>
+                      <th>temperatura</th>
+                      <th>tipo</th>
+                      <th>piso</th>
+                      <th>edificio</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let resp of respuesta">
+                      <td>{{ resp.temperatura }}</td>
+                      <td>{{ resp.tipo }}</td>
+                      <td>{{ resp.piso }}</td>
+                      <td>{{ resp.edificio }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>
